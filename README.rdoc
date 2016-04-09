@@ -1,0 +1,77 @@
+Help Me Chill
+/players/song1
+http://streaming.radio.co:80/s20761ce2a/listen
+https://streaming.radio.co/s20761ce2a/listen
+embeded:
+<script src="https://embed.radio.co/player/cfebd89.js"></script>
+
+
+
+I Wanna Dance
+/players/song2
+http://streaming.radio.co:80/s56c014a5a/listen
+
+<script src="https://embed.radio.co/player/1b8a17d.js"></script>
+
+
+
+Lift Me Up
+/players/song3
+http://streaming.radio.co:80/sc039c0d9a/listen
+
+<script src="https://embed.radio.co/player/f0f621a.js"></script>
+
+
+
+==============
+
+<iframe src="https://radioco.herokuapp.com/players/song1" width="315" style="border: none; border-radius: 8px; height: 454px;"></iframe>
+
+
+function receiveMessage(event)
+{  
+  if (event.origin !== "https://radioco.herokuapp.com")
+    return;
+  if(event.data.messag == 'ITUNE-BUY-1'){
+    window.open(
+      'http://www.apple.com/itunes/',
+      '_blank' // <- This is what makes it open in a new window.
+    );
+
+  }
+  if(event.data.messag == 'ITUNE-BUY-2'){
+    window.open(
+      'http://www.apple.com/itunes/',
+      '_blank' // <- This is what makes it open in a new window.
+    );
+  }
+  if(event.data.messag == 'ITUNE-BUY-3'){
+    window.open(
+      'http://www.apple.com/itunes/',
+      '_blank' // <- This is what makes it open in a new window.
+    );
+  }
+}
+window.addEventListener("message", receiveMessage, false);
+
+
+
+Speed:
+
+Help Me Chill = Song1
+Lift Me Up = Song2
+I Wanna Dance = Song3
+
+
+Chill < Lift Me Up < I Wanna Dance
+
+
+Song1 < Song2 < Song3
+
+
+
+
+
+
+
+
